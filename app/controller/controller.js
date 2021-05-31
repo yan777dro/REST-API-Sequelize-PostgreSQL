@@ -6,7 +6,7 @@ exports.create = (req, res) => {
     
     if (!req.body.Occupation) {
       res.status(400).send({
-        message: "error user not created, this field is required!"
+        message: "error employee could not be created, this field is required!"
       });
       return;
     }
