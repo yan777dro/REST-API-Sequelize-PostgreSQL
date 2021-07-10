@@ -4,9 +4,9 @@ const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
     
-    if (!req.body.Occupation) {
+    if (!req.body.firstName && !req.body.lastName && !req.body.Occupation && !req.body.Salary) {
       res.status(400).send({
-        message: "error employee could not be created, this field is required!"
+        message: "error employee could not be created, all fields are required!"
       });
       return;
     }
